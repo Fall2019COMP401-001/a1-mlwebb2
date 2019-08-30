@@ -52,12 +52,12 @@ public class A1Jedi {
 				int a = countingTotalItems(itemNames[d], itemCount, foodName);
 				totalItems[d] = totalItems[d] + a;
 			}
-			for (int i = 0; i < itemNames.length; i++) {
-				if (customersBought[i] == 0) {
-					System.out.println("No customers bought " + itemNames[i]);
-				} else {
-					System.out.println(customersBought[i] + " customers bought " + totalItems[i] + " " + itemNames[i]);
-				}
+		}
+		for (int i = 0; i < itemNames.length; i++) {
+			if (customersBought[i] == 0) {
+				System.out.println("No customers bought " + itemNames[i]);
+			} else {
+				System.out.println(customersBought[i] + " customers bought " + totalItems[i] + " " + itemNames[i]);
 			}
 		}
 		
@@ -75,7 +75,7 @@ public class A1Jedi {
 
 	static int customersWhoBoughtItems(String itemNames, String[] foodName) {
 		for (int x = 0; x < foodName.length; x++) {
-			if (itemNames.equals(foodName)) {
+			if (itemNames.equals(foodName[x])) {
 				return 1;
 			}
 		}
